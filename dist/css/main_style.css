@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   color: white;
   padding: 1.5rem;
@@ -8,6 +12,7 @@ body {
 
 .info,
 .logo-area {
+  position: relative;
   -webkit-box-shadow: 0px 0px 10px 5px #4d1a6e;
           box-shadow: 0px 0px 10px 5px #4d1a6e;
   background: #7c28b4;
@@ -66,5 +71,20 @@ p {
   display: inline-block;
   margin-left: auto;
   margin-right: 0.15rem;
+}
+
+.gb-left {
+  position: absolute;
+  left: 25%;
+  background: whitesmoke;
+  color: black;
+  width: 50%;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.gb-left p {
+  margin: 0;
 }
 /*# sourceMappingURL=main_style.css.map */

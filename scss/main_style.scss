@@ -1,5 +1,9 @@
 @import "../scss/variables";
 
+html {
+  height: 100%;
+}
+
 body {
   color: white;
   padding: $padding-md;
@@ -10,6 +14,7 @@ body {
 
 .info,
 .logo-area {
+  position: relative;
   box-shadow: 0px 0px 10px 5px $primary-color;
   background: $secondary-color;
   border-radius: 0.5rem;
@@ -84,12 +89,30 @@ p {
   margin-right: 0.15rem;
 }
 
-// .progress .progress-bar .custom-progress-bar {
-//   color: red;
-// }
+.gb-left {
+  position: absolute;
+  left: 25%;
+  background: whitesmoke;
+  color: black;
+  width: 50%;
+  // margin: auto;
+
+  text-align: center;
+  padding: $padding-sm 0;
+  border-radius: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
 // @media only screen and (min-width: 768px) {
-//   .info,
+//   body {
+//     background-image: url(../images/bg-desktop.svg);
+//     background-size: cover;
+//     background-position: center;
+//   }
 //   .logo-area {
-//     display: inline-block;
+//     margin: 0;
 //   }
 // }
