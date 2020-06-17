@@ -27,4 +27,44 @@ ion-icon {
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
+
+p {
+  font-size: 0.85rem;
+}
+
+.progress {
+  margin-bottom: 0.5rem;
+  border-radius: 5rem;
+}
+
+.custom-progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  text-align: center;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(35%, #090979), to(#00d4ff));
+  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+  border-radius: 5rem;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #090979;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 0.15rem;
+}
 /*# sourceMappingURL=main_style.css.map */
