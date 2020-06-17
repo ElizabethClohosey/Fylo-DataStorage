@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ElizabethClohosey/Fylo-DataStorage#readme",
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "node-sass": "^4.14.1",
     "sass": "^1.26.8"
   }

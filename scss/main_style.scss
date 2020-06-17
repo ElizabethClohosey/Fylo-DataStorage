@@ -1,5 +1,30 @@
 @import "../scss/variables";
 
-.info {
+body {
+  color: white;
+  padding: $padding-md;
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info,
+.logo-area {
   box-shadow: 0px 0px 10px 5px $primary-color;
+  background: $secondary-color;
+  border-radius: 0.5rem;
+  padding: $padding-md;
+}
+
+.logo-area {
+  border-top-right-radius: 5rem;
+  margin: 5rem auto 1rem;
+}
+
+ion-icon {
+  font-size: 2rem;
+  background: $primary-color;
+  color: $secondary-color;
+  padding: $padding-xs;
+  border-radius: 0.5rem;
 }
