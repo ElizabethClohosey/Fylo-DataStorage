@@ -1,13 +1,23 @@
-html {
+html,
+body {
   height: 100%;
 }
 
 body {
   color: white;
   padding: 1.5rem;
-  background-image: url(../images/bg-mobile.svg);
+  background-image: url(../../images/bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .info,
@@ -22,7 +32,7 @@ body {
 
 .logo-area {
   border-top-right-radius: 5rem;
-  margin: 5rem auto 1rem;
+  margin-bottom: 1rem;
 }
 
 ion-icon {
@@ -33,13 +43,13 @@ ion-icon {
   border-radius: 0.5rem;
 }
 
-p {
-  font-size: 0.85rem;
-}
-
 .info span {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+}
+
+.info p {
+  font-size: 0.85rem;
 }
 
 .progress {
@@ -51,16 +61,11 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
-  text-align: center;
-  background: #020024;
+  background: #00d4ff;
   background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(35%, #090979), to(#00d4ff));
   background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
   -webkit-transition: width 0.6s ease;
@@ -80,11 +85,10 @@ p {
 
 .gb-left {
   position: absolute;
-  left: 25%;
+  right: 25%;
   background: whitesmoke;
   color: black;
   width: 50%;
-  text-align: center;
   padding: 0.5rem 0;
   border-radius: 0.5rem;
   display: -webkit-box;
@@ -119,5 +123,39 @@ p {
 
 .gb-left span:nth-child(3) {
   margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(../../images/bg-desktop.svg);
+    background-size: cover;
+    background-position: 35% 75%;
+  }
+  .logo-area {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .gb-left {
+    top: -2rem;
+    right: 1rem;
+    width: 10rem;
+  }
+  .gb-left p::after {
+    border-color: transparent whitesmoke transparent transparent;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid;
+    border-width: 1rem;
+    bottom: -0.9rem;
+    content: " ";
+    display: block;
+    right: 0;
+    position: absolute;
+  }
+  .info p {
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=main_style.css.map */

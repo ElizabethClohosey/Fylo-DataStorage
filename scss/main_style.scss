@@ -1,15 +1,18 @@
 @import "../scss/variables";
+@import "../scss/mixins";
 
-html {
+html,
+body {
   height: 100%;
 }
 
 body {
   color: white;
   padding: $padding-md;
-  background-image: url(../images/bg-mobile.svg);
+  background-image: url(../../images/bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  @include center;
 }
 
 .info,
@@ -23,7 +26,7 @@ body {
 
 .logo-area {
   border-top-right-radius: 5rem;
-  margin: 5rem auto 1rem;
+  margin-bottom: 1rem;
 }
 
 ion-icon {
@@ -34,13 +37,15 @@ ion-icon {
   border-radius: 0.5rem;
 }
 
-p {
-  font-size: 0.85rem;
-}
+.info {
+  span {
+    font-family: $secondary-font;
+    font-weight: 700;
+  }
 
-.info span {
-  font-family: $secondary-font;
-  font-weight: 700;
+  p {
+    font-size: 0.85rem;
+  }
 }
 .progress {
   margin-bottom: 0.5rem;
@@ -49,11 +54,12 @@ p {
 
 .custom-progress-bar {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
   color: #fff;
-  text-align: center;
-  background: rgb(2, 0, 36);
+  // text-align: center;
+  background: rgb(0, 212, 255);
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -76,16 +82,17 @@ p {
 
 .gb-left {
   position: absolute;
-  left: 25%;
+  right: 25%;
   background: whitesmoke;
   color: black;
   width: 50%;
-  text-align: center;
+  // text-align: center;
   padding: $padding-xs 0;
   border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 
   p {
     margin: 0 0 0 0.5rem;
@@ -112,15 +119,41 @@ p {
   }
 }
 
-// body > div > div > div.col-md-7.info > div.gb-left > span
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(../../images/bg-desktop.svg);
+    background-size: cover;
+    background-position: 35% 75%;
+  }
 
-// @media only screen and (min-width: 768px) {
-//   body {
-//     background-image: url(../images/bg-desktop.svg);
-//     background-size: cover;
-//     background-position: center;
-//   }
-//   .logo-area {
-//     margin: 0;
-//   }
-// }
+  .logo-area {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .gb-left {
+    top: -2rem;
+    right: 1rem;
+    width: 10rem;
+
+    p::after {
+      border-color: transparent whitesmoke transparent transparent;
+      -o-border-image: none;
+      border-image: none;
+      border-style: solid;
+      border-width: 1rem;
+      bottom: -0.9rem;
+      content: " ";
+      display: block;
+      right: 0;
+      position: absolute;
+    }
+  }
+
+  .info {
+    p {
+      text-align: left;
+    }
+  }
+}
